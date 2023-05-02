@@ -8,12 +8,12 @@ const PORT =8000;
 const Pizza = require('./models/PizzaModel.js')
 
 
-const db= require("../backend_server/db")
+const db= require("./db.js")
 
 app.use(express.json());
 app.use(cors())
 
-const pizzasRoute =require('./routes/pizzasRouter')
+const pizzasRoute =require('./routes/pizzasRouter.js')
 const userRoute = require('./routes/UserRouter.js')
 
 app.use('/api/pizzas',pizzasRoute)
